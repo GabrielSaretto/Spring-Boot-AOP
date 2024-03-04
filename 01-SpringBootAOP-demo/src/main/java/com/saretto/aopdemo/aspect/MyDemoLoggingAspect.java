@@ -12,7 +12,7 @@ public class MyDemoLoggingAspect {
 
     // let's start with an @Before advice
 
-    @Before("execution(* add*(..))")
+    @Before("execution(* com.saretto.aopdemo.dao.*.*(..))")
 
     public void beforeAddAccountAdvice(){
 
