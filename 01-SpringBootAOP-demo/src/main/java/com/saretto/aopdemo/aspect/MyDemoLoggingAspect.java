@@ -12,10 +12,10 @@ public class MyDemoLoggingAspect {
 
     // let's start with an @Before advice
 
-    @Before("execution(* add*(com.saretto.aopdemo.Account))")
+    @Before("execution(* add*(..))")
 
     public void beforeAddAccountAdvice(){
 
-        System.out.println("\n=====>>> Executing @Before advice on addAccount()");
+        System.out.println("\n=====>>> Executing @Before advice on method");
     }
 }
