@@ -28,6 +28,7 @@ public class MyDemoLoggingAspect {
 
         // now, let's execute the method
         Object result = null;
+
         try {
             result = theProceedingJoinPoint.proceed();
         }
@@ -35,8 +36,8 @@ public class MyDemoLoggingAspect {
             // log the exception
             System.out.println(exc.getMessage());
 
-            // give user a custom message
-            result = "Major accident! But no worries, your private AOP helicopter is on the way!";
+            // rethrow exception
+            throw exc;
         }
 
         // get end timestamp
